@@ -12,8 +12,6 @@ int main()
 
     for(int i = 0; i < 100; i++) {
         dice_rolls[i] = (rand() % 6) + 1;
-
-        printf("%d\n", dice_rolls[i]);
     }
     
     for(int i = 0; i < 100; i++) {
@@ -39,12 +37,12 @@ int main()
         sum += dice_rolls[i];
     }
     
-    printf("Ettor: %d\n", dice_values[0]);
-    printf("Tvaor: %d\n", dice_values[1]);
-    printf("Treor: %d\n", dice_values[2]);
-    printf("Fyror: %d\n", dice_values[3]);
-    printf("Femmor: %d\n", dice_values[4]);
-    printf("Sexor: %d\n", dice_values[5]); 
+    printf("%d\n", dice_values[0]);
+    printf("%d\n", dice_values[1]);
+    printf("%d\n", dice_values[2]);
+    printf("%d\n", dice_values[3]);
+    printf("%d\n", dice_values[4]);
+    printf("%d\n", dice_values[5]); 
     printf("%d\n", sum);
     printf("%.1f\n", sum/100.0);
 
