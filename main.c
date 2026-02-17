@@ -7,12 +7,46 @@ int main()
     srand(1);
 
     int dice_rolls[100];
+    int dice_values[6];
+    int sum = 0;
 
     for(int i = 0; i < 100; i++) {
         dice_rolls[i] = (rand() % 6) + 1;
 
-        printf("roll %d\n", dice_rolls[i]);
+        printf("%d\n", dice_rolls[i]);
     }
+    
+    for(int i = 0; i < 100; i++) {
+        if (dice_rolls[i] == 1) {
+            dice_values[0]++;
+        }
+        if (dice_rolls[i] == 2) {
+            dice_values[1]++;
+        }
+        if (dice_rolls[i] == 3) {
+            dice_values[2]++;
+        }
+        if (dice_rolls[i] == 4) {
+            dice_values[3]++;
+        }
+        if (dice_rolls[i] == 5) {
+            dice_values[4]++;
+        }
+        if (dice_rolls[i] == 6) {
+            dice_values[5]++;
+        }
+
+        sum += dice_rolls[i];
+    }
+    
+    printf("Ettor: %d\n", dice_values[0]);
+    printf("Tvaor: %d\n", dice_values[1]);
+    printf("Treor: %d\n", dice_values[2]);
+    printf("Fyror: %d\n", dice_values[3]);
+    printf("Femmor: %d\n", dice_values[4]);
+    printf("Sexor: %d\n", dice_values[5]); 
+    printf("%d\n", sum);
+    printf("%.1f\n", sum/100.0);
 
     return 0;
 }
