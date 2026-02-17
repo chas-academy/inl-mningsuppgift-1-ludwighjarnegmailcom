@@ -7,7 +7,12 @@ int main()
     srand(1);
 
     int dice_rolls[100];
-    int dice_values[6];
+    int one = 0;
+    int two = 0;
+    int three = 0;
+    int four = 0;
+    int five = 0;
+    int six = 0;
     int sum = 0;
 
     for(int i = 0; i < 100; i++) {
@@ -16,33 +21,33 @@ int main()
     
     for(int i = 0; i < 100; i++) {
         if (dice_rolls[i] == 1) {
-            dice_values[0]++;
+            one++;
         }
         if (dice_rolls[i] == 2) {
-            dice_values[1]++;
+            two++;
         }
         if (dice_rolls[i] == 3) {
-            dice_values[2] ++;
+            three++;
         }
         if (dice_rolls[i] == 4) {
-            dice_values[3]++;
+            four++;
         }
         if (dice_rolls[i] == 5) {
-            dice_values[4]++;
+            five++;
         }
         if (dice_rolls[i] == 6) {
-            dice_values[5]++;
+            six++;
         }
 
         sum += dice_rolls[i];
     }
     
-    printf("%d\n", dice_values[0]);
-    printf("%d\n", dice_values[1]);
-    printf("%d\n", dice_values[2]); // Won't print properly. If set to single int it works (int threes = 0).
-    printf("%d\n", dice_values[3]);
-    printf("%d\n", dice_values[4]);
-    printf("%d\n", dice_values[5]); 
+    printf("%d\n", one);
+    printf("%d\n", two);
+    printf("%d\n", three);
+    printf("%d\n", four);
+    printf("%d\n", five);
+    printf("%d\n", six); 
     printf("%d\n", sum);
     printf("%.1f", sum/100.0);
 
